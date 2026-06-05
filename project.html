@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" data-accent="electric">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Case study — Ashwani Kumar</title>
+<link rel="stylesheet" href="portfolio.css" />
+<style>
+  .case-hero { padding-top: clamp(110px, 16vh, 170px); padding-bottom: 0; }
+  .back-link { font-family: var(--font-mono); font-size: 13px; color: var(--text-dim);
+    display: inline-flex; align-items: center; gap: 8px; margin-bottom: 30px; transition: color .2s; }
+  .back-link:hover { color: var(--accent); }
+  .back-link .arr { transition: translate .2s; } .back-link:hover .arr { translate: -3px 0; }
+  .case-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 22px; }
+  .case-meta .chip { font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);
+    border: 1px solid var(--line); border-radius: 100px; padding: 5px 12px; background: var(--bg-1); }
+  .case-meta .chip .accent { color: var(--accent); }
+  .case-hero h1 { font-size: clamp(34px, 6vw, 64px); line-height: 1.02; letter-spacing: -0.03em;
+    font-weight: 700; margin: 0 0 18px; max-width: 18ch; }
+  .case-hero .lede { font-size: clamp(17px, 2.2vw, 22px); color: var(--text-dim); max-width: 60ch; margin: 0; }
+  .case-shot { margin-top: clamp(40px, 6vw, 64px); }
+  .case-shot image-slot { width: 100%; aspect-ratio: 16/9; border-radius: var(--radius-lg); border: 1px solid var(--line); }
+
+  .case-body { display: grid; grid-template-columns: 1fr 300px; gap: clamp(32px, 5vw, 80px); align-items: start; }
+  @media (max-width: 880px) { .case-body { grid-template-columns: 1fr; } }
+  .case-block { margin-bottom: 44px; }
+  .case-block h2 { font-size: clamp(22px, 3vw, 30px); letter-spacing: -0.02em; font-weight: 600; margin: 0 0 16px; }
+  .case-block p { color: var(--text-dim); font-size: 17px; margin: 0 0 16px; max-width: 64ch; }
+  .case-block p strong { color: var(--text); font-weight: 600; }
+  .feat-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+  .feat-list li { display: grid; grid-template-columns: 26px 1fr; gap: 12px; align-items: start;
+    color: var(--text-dim); font-size: 16.5px; }
+  .feat-list li .fi { font-family: var(--font-mono); color: var(--accent); font-size: 13px; padding-top: 3px; }
+  .feat-list li strong { color: var(--text); font-weight: 600; }
+
+  .case-side { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 16px; }
+  .side-card { border: 1px solid var(--line-soft); border-radius: var(--radius-lg); padding: 22px; background: var(--bg-1); }
+  .side-card h3 { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase;
+    color: var(--text-faint); margin: 0 0 14px; }
+  .side-card .stack { display: flex; flex-wrap: wrap; gap: 7px; }
+  .side-card .chip { font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);
+    border: 1px solid var(--line-soft); border-radius: var(--radius); padding: 5px 10px; background: var(--bg); }
+  .side-metric { display: flex; align-items: baseline; justify-content: space-between; padding: 11px 0; border-top: 1px solid var(--line-soft); }
+  .side-metric:first-of-type { border-top: 0; }
+  .side-metric .k { font-family: var(--font-mono); font-size: 13px; color: var(--text-dim); }
+  .side-metric .v { font-family: var(--font-display); font-weight: 700; font-size: 19px; letter-spacing: -0.02em; }
+  .side-metric .v .u { color: var(--accent); }
+
+  .case-nav { border-top: 1px solid var(--line-soft); margin-top: 20px; }
+  .case-nav a { display: flex; align-items: center; justify-content: space-between; padding: 34px 0;
+    font-family: var(--font-mono); color: var(--text-dim); transition: color .2s; gap: 16px; }
+  .case-nav a:hover { color: var(--accent); }
+  .case-nav a .nn-l { font-size: 12px; color: var(--text-faint); display: block; margin-bottom: 4px; }
+  .case-nav a .nn-t { font-family: var(--font-display); font-size: clamp(18px,2.5vw,24px); font-weight: 600; color: var(--text); }
+  .case-nav a:hover .nn-t { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="bg-fx"></div>
+<div class="bg-glow"></div>
+
+<nav class="nav">
+  <a href="index.html" class="brand"><span class="dot"></span>ashwani<span class="muted">_kumar</span></a>
+  <div class="nav-links">
+    <a href="index.html#about"><span class="hash">#</span>about</a>
+    <a href="index.html#projects"><span class="hash">#</span>projects</a>
+    <a href="index.html#skills"><span class="hash">#</span>skills</a>
+    <a href="index.html#experience"><span class="hash">#</span>experience</a>
+    <a href="index.html#contact"><span class="hash">#</span>contact</a>
+  </div>
+  <a href="mailto:akoff.2k@gmail.com" class="nav-cta">Get in touch</a>
+  <button class="nav-burger" aria-label="Menu"><span></span></button>
+</nav>
+
+<main id="top">
+  <header class="case-hero wrap">
+    <a href="index.html#projects" class="back-link"><span class="arr">←</span> back to projects</a>
+    <div class="case-meta" id="case-meta"></div>
+    <h1 id="case-title">Project</h1>
+    <p class="lede reveal" id="case-lede"></p>
+  </header>
+
+  <section>
+    <div class="wrap case-body">
+      <div class="case-main">
+        <div class="case-block reveal">
+          <h2>The problem</h2>
+          <p id="case-problem"></p>
+        </div>
+        <div class="case-block reveal">
+          <h2>The approach</h2>
+          <p id="case-approach"></p>
+        </div>
+        <div class="case-block reveal">
+          <h2>What I built</h2>
+          <ul class="feat-list" id="case-features"></ul>
+        </div>
+        <div class="case-block reveal">
+          <h2>Outcome</h2>
+          <p id="case-outcome"></p>
+        </div>
+      </div>
+
+      <aside class="case-side">
+        <div class="side-card reveal">
+          <h3>Tech stack</h3>
+          <div class="stack" id="case-stack"></div>
+        </div>
+        <div class="side-card reveal">
+          <h3>At a glance</h3>
+          <div id="case-metrics"></div>
+        </div>
+        <div class="side-card reveal">
+          <h3>Links</h3>
+          <div class="stack">
+            <a class="chip" href="https://github.com/" target="_blank" rel="noopener">↗ GitHub</a>
+            <a class="chip" href="mailto:akoff.2k@gmail.com">↗ Ask me</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap case-nav">
+      <a id="case-next" href="project.html">
+        <span><span class="nn-l">// next project</span><span class="nn-t" id="case-next-title"></span></span>
+        <span class="arr">→</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 Ashwani Kumar — built solo, from scratch.</span>
+  <span class="foot-links">
+    <a href="index.html">home</a>
+    <a href="mailto:akoff.2k@gmail.com">email</a>
+    <a href="cv.html">cv</a>
+  </span>
+</footer>
+
+<script>
+/* ---- Case-study data ---- */
+const PROJECTS = {
+  "analysis-ai": {
+    idx: "01", type: "Platform", year: "2025", role: "Solo build — architecture → API",
+    title: "Analysis AI Backend Service",
+    lede: "A scalable AI workflow-orchestration platform where specialised LLM agents run multi-stage document analysis — and the backend that makes it dependable in production.",
+    problem: "Client teams needed to turn raw documents into structured business artefacts — BRDs, plans, prompts and notebooks — but every request was a bespoke, manual pipeline. There was <strong>no orchestration layer</strong> to chain the AI steps, keep them secure, or make the process repeatable across clients.",
+    approach: "I architected a single platform on <strong>NestJS and MongoDB</strong> that treats analysis as a pipeline of specialised LLM agents. Each stage is a composable unit, so a new client workflow is configuration — not a rewrite. Security and observability were first-class from day one, not bolted on later.",
+    features: [
+      ["Multi-agent orchestration", "specialised LLM agents for BRD generation, planning, prompt engineering and notebook creation, chained through staged workflows."],
+      ["Secure document processing", "ingestion for PDF, DOCX and TXT with automated text extraction and NER-based anonymisation for privacy-compliant analysis."],
+      ["Real-time streaming", "token-level response streaming so users see results form live across each analysis stage."],
+      ["Versioning & memory", "document versioning and persistent conversation history enabling iterative refinement."]
+    ],
+    outcome: "One platform replaced a stack of one-off scripts: new client-facing AI workflows now ship by composing existing agents instead of rebuilding pipelines. The streaming + versioning layer turned a black-box process into something teams could <strong>iterate on and trust</strong>.",
+    stack: ["NestJS", "TypeScript", "MongoDB", "OpenAI", "Swagger", "REST"],
+    metrics: [["Agents", "4", "+"], ["Doc formats", "3", ""], ["Role", "Solo", ""], ["Privacy", "NER", "✓"]],
+    next: "rag"
+  },
+  "rag": {
+    idx: "02", type: "RAG system", year: "2025", role: "Solo build — pipeline → retrieval",
+    title: "Multi-Format Document Intelligence & RAG",
+    lede: "A production-ready retrieval platform that turns 7+ document formats into trustworthy, source-grounded answers.",
+    problem: "Teams had documents in every format imaginable — PDFs, scans, spreadsheets — and no reliable way to search across them. Keyword search missed context; naive RAG <strong>hallucinated and lost the source</strong>, so answers couldn't be trusted.",
+    approach: "I built a production RAG platform on <strong>FastAPI and Azure OpenAI</strong> with parallel ingestion and an agentic retrieval layer that expands queries, ranks results and synthesises across sources — plus a custom <strong>TOON encoding</strong> for compact, semantically rich representations.",
+    features: [
+      ["Multi-format ingestion", "7+ document formats with OCR-based extraction for scanned and image-heavy files."],
+      ["Parallel pipelines", "ThreadPoolExecutor with configurable concurrency, significantly improving ingestion throughput."],
+      ["Agentic retrieval", "intelligent query expansion, top-K search and multi-source response synthesis."],
+      ["TOON encoding", "custom encoding over Azure OpenAI embeddings to sharpen semantic search and retrieval."]
+    ],
+    outcome: "A retrieval system that scales with the document pile and answers <strong>with its sources</strong> — fast ingestion, grounded responses, no black box.",
+    stack: ["Python", "FastAPI", "Streamlit", "Azure OpenAI", "OCR", "ThreadPool"],
+    metrics: [["Formats", "7", "+"], ["Ingestion", "Parallel", ""], ["Retrieval", "Agentic", ""], ["Grounded", "Yes", "✓"]],
+    next: "hirelens"
+  },
+  "hirelens": {
+    idx: "03", type: "Full-stack", year: "2025", role: "Solo build — API → dashboard",
+    title: "HireLens — AI Résumé Screening",
+    lede: "A résumé-screening platform that reads a stack of CVs and hands recruiters a ranked shortlist — with the reasoning attached.",
+    problem: "Recruiters drown in résumés and rarely get past the first few. Manual screening is slow, inconsistent and thrown off by formatting — <strong>strong candidates get lost in the pile</strong>.",
+    approach: "I built an end-to-end platform that parses any résumé, extracts structured signals and uses an <strong>LLM to evaluate candidates against a role</strong> — surfaced through a recruiter dashboard with real-time, explainable shortlisting.",
+    features: [
+      ["LLM candidate evaluation", "async REST APIs and document parsing drive LLM-based scoring against role requirements."],
+      ["Automated extraction", "pipelines pull skills, education and experience into clean structured data."],
+      ["Secure access", "API authentication, input validation and cross-origin controls throughout."],
+      ["Recruiter dashboards", "React + Material UI delivering real-time insights and AI-assisted shortlists."]
+    ],
+    outcome: "Screening that's fast, consistent and explainable — recruiters get a ranked shortlist and the <strong>why</strong> behind each pick.",
+    stack: ["Python", "Flask", "React.js", "Azure OpenAI", "Node.js", "Material UI"],
+    metrics: [["Scope", "Full", ""], ["Evaluation", "LLM", ""], ["Frontend", "React", ""], ["Access", "Secure", "✓"]],
+    next: "thesis"
+  },
+  "thesis": {
+    idx: "04", type: "M.Tech thesis", year: "2025—26", role: "Research — DTU",
+    title: "Hybrid LightGBM–1D CNN for CAN Anomalies",
+    lede: "An intrusion-detection pipeline that spots attacks on a car's internal network — across 400,000+ messages and four attack types.",
+    problem: "Modern vehicles run on the CAN bus, a network with <strong>no built-in security</strong>. Injected messages — DoS, fuzzing, impersonation — can hijack critical functions, and detection has to run on resource-constrained embedded hardware.",
+    approach: "I designed a <strong>hybrid LightGBM–1D CNN</strong> intrusion-detection pipeline over real CAN traffic, engineered statistical and temporal features, then benchmarked it against classical models with embedded deployment in mind.",
+    features: [
+      ["Large-scale data", "processed and analysed 400,000+ vehicle communication messages across Normal, DoS, Fuzzy and Impersonation categories."],
+      ["Feature engineering", "Python / Pandas / NumPy workflows generating statistical and temporal indicators to sharpen anomaly detection."],
+      ["Model benchmarking", "LightGBM, 1D-CNN, SVM, Decision Tree and KNN compared, reaching 89.34% classification accuracy."],
+      ["Embedded feasibility", "evaluated deployment trade-offs for resource-constrained automotive hardware."]
+    ],
+    outcome: "A detection approach that balances accuracy and footprint — <strong>89.34% on a hard four-class problem</strong>, with a clear path to embedded deployment.",
+    stack: ["Python", "LightGBM", "TensorFlow", "Scikit-Learn", "Pandas", "NumPy"],
+    metrics: [["Accuracy", "89.34", "%"], ["Messages", "400K", "+"], ["Classes", "4", ""], ["Target", "Embedded", ""]],
+    next: "analysis-ai"
+  }
+};
+
+(function () {
+  const params = new URLSearchParams(location.search);
+  const key = params.get('p') && PROJECTS[params.get('p')] ? params.get('p') : 'analysis-ai';
+  const d = PROJECTS[key];
+
+  document.title = d.title + " — Ashwani Kumar";
+  document.getElementById('case-meta').innerHTML =
+    '<span class="chip"><span class="accent">' + d.idx + '</span> / ' + d.type + '</span>' +
+    '<span class="chip">' + d.year + '</span>' +
+    '<span class="chip">' + d.role + '</span>';
+  document.getElementById('case-title').textContent = d.title;
+  document.getElementById('case-lede').innerHTML = d.lede;
+  document.getElementById('case-problem').innerHTML = d.problem;
+  document.getElementById('case-approach').innerHTML = d.approach;
+  document.getElementById('case-outcome').innerHTML = d.outcome;
+
+  document.getElementById('case-features').innerHTML = d.features.map(function (f) {
+    return '<li><span class="fi">▹</span><span><strong>' + f[0] + '</strong> — ' + f[1] + '</span></li>';
+  }).join('');
+
+  document.getElementById('case-stack').innerHTML = d.stack.map(function (s) {
+    return '<span class="chip">' + s + '</span>';
+  }).join('');
+
+  document.getElementById('case-metrics').innerHTML = d.metrics.map(function (m) {
+    return '<div class="side-metric"><span class="k">' + m[0] + '</span><span class="v">' + m[1] +
+      (m[2] ? '<span class="u">' + m[2] + '</span>' : '') + '</span></div>';
+  }).join('');
+
+  const nd = PROJECTS[d.next];
+  document.getElementById('case-next').href = 'project.html?p=' + d.next;
+  document.getElementById('case-next-title').textContent = nd.title;
+
+  /* carry the saved accent direction across pages */
+  try {
+    const saved = JSON.parse(localStorage.getItem('__tweaks_index.html') || localStorage.getItem('__tweaks') || 'null');
+  } catch (e) {}
+})();
+</script>
+
+<script src="portfolio.js"></script>
+</body>
+</html>

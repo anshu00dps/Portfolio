@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-accent="electric">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ashwani Kumar — CV</title>
+<link rel="stylesheet" href="portfolio.css" />
+<style>
+  .cv-toolbar { position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; align-items: center;
+    justify-content: space-between; padding: 14px var(--gutter);
+    background: color-mix(in oklch, var(--bg) 80%, transparent); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line-soft); }
+  .cv-toolbar .back-link { font-family: var(--font-mono); font-size: 13px; color: var(--text-dim);
+    display: inline-flex; align-items: center; gap: 8px; }
+  .cv-toolbar .back-link:hover { color: var(--accent); }
+  .cv-actions { display: flex; gap: 10px; }
+
+  .sheet { max-width: 880px; margin: 100px auto 80px; padding: clamp(28px, 5vw, 60px);
+    background: var(--bg-1); border: 1px solid var(--line); border-radius: var(--radius-lg); position: relative; z-index: 1; }
+  .cv-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px 32px; flex-wrap: wrap;
+    padding-bottom: 22px; border-bottom: 1px solid var(--line); }
+  .cv-head .cv-id { flex: 1 1 320px; min-width: 0; }
+  .cv-head h1 { font-size: clamp(28px, 4.4vw, 42px); line-height: 1.05; letter-spacing: -0.03em; font-weight: 700; margin: 0 0 8px; }
+  .cv-head .role { font-family: var(--font-mono); color: var(--accent); font-size: 14px; margin: 0; }
+  .cv-contact { font-family: var(--font-mono); font-size: 12.5px; color: var(--text-dim);
+    display: flex; flex-direction: column; gap: 5px; text-align: right; }
+  .cv-contact a { color: var(--text-dim); }
+  .cv-contact a:hover { color: var(--accent); }
+
+  .cv-sec { padding: 26px 0; border-bottom: 1px solid var(--line-soft); }
+  .cv-sec:last-child { border-bottom: 0; }
+  .cv-sec > h2 { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 18px; }
+  .cv-entry { margin-bottom: 20px; }
+  .cv-entry:last-child { margin-bottom: 0; }
+  .cv-entry .row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: baseline; }
+  .cv-entry h3 { font-size: 17px; font-weight: 600; margin: 0; }
+  .cv-entry .when { font-family: var(--font-mono); font-size: 12.5px; color: var(--text-faint); white-space: nowrap; }
+  .cv-entry .sub { font-family: var(--font-mono); font-size: 13px; color: var(--text-dim); margin: 2px 0 8px; }
+  .cv-entry ul { margin: 8px 0 0; padding-left: 18px; }
+  .cv-entry li { color: var(--text-dim); font-size: 14.5px; margin-bottom: 6px; }
+  .cv-entry li::marker { color: var(--accent); }
+  .cv-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+  .cv-tags .chip { font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);
+    border: 1px solid var(--line-soft); border-radius: var(--radius); padding: 5px 9px; background: var(--bg); }
+  .cv-skill-row { display: grid; grid-template-columns: 130px 1fr; gap: 16px; padding: 9px 0; align-items: start; }
+  .cv-skill-row .lab { font-family: var(--font-mono); font-size: 13px; color: var(--text); }
+  @media (max-width: 560px) { .cv-skill-row { grid-template-columns: 1fr; gap: 6px; } }
+
+  /* PRINT — clean ink-on-paper */
+  @media print {
+    @page { margin: 14mm; }
+    .bg-fx, .bg-glow, .cv-toolbar { display: none !important; }
+    body { background: #fff; color: #111; }
+    .sheet { margin: 0; max-width: none; border: 0; border-radius: 0; padding: 0; background: #fff; }
+    .cv-head, .cv-sec, .cv-sec:last-child { border-color: #ddd; }
+    .cv-head h1 { color: #000; }
+    .cv-head .role, .cv-sec > h2, .cv-entry li::marker { color: #1a56db; }
+    .cv-entry h3 { color: #000; }
+    .cv-entry .sub, .cv-entry li, .cv-contact, .cv-contact a, .cv-entry .when, .cv-skill-row .lab, .cv-tags .chip { color: #333; }
+    .cv-tags .chip { border-color: #ccc; background: #fff; }
+    .cv-sec { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="bg-fx"></div>
+<div class="bg-glow"></div>
+
+<div class="cv-toolbar">
+  <a href="index.html" class="back-link"><span>←</span> back to portfolio</a>
+  <div class="cv-actions">
+    <button class="btn btn-ghost" onclick="window.print()">Save as PDF <span class="arr">↓</span></button>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="cv-head">
+    <div class="cv-id">
+      <h1>Ashwani Kumar</h1>
+      <p class="role">AI / Backend Engineer</p>
+    </div>
+    <div class="cv-contact">
+      <a href="mailto:akoff.2k@gmail.com">akoff.2k@gmail.com</a>
+      <a href="tel:+917986554830">+91 79865 54830</a>
+      <a href="https://linkedin.com/" target="_blank" rel="noopener">linkedin.com/in/ashwani</a>
+      <a href="https://github.com/" target="_blank" rel="noopener">github.com/ashwani</a>
+    </div>
+  </div>
+
+  <section class="cv-sec">
+    <h2>Profile</h2>
+    <p style="color:var(--text-dim);margin:0;font-size:15px;max-width:70ch;">AI &amp; backend engineer specialising in production LLM and RAG systems. End-to-end builder — from data pipelines and ML research to secure, scalable APIs. Resourceful under constraints; ships first, optimises fast.</p>
+  </section>
+
+  <section class="cv-sec">
+    <h2>Experience</h2>
+    <div class="cv-entry">
+      <div class="row"><h3>Cognitio Analytics — Software Development Intern</h3><span class="when">Jun 2025 — May 2026</span></div>
+      <ul>
+        <li>Built and maintained backend services for AI-powered enterprise applications using Python, FastAPI and Azure OpenAI — secure REST APIs and scalable processing workflows.</li>
+        <li>Designed reusable components for document ingestion, data extraction, semantic retrieval and LLM orchestration, enabling rapid delivery of multiple client-facing AI solutions.</li>
+        <li>Improved system performance through asynchronous processing, concurrent task execution, structured logging and environment-driven configuration.</li>
+        <li>Collaborated in an Agile-Scrum team across requirements, sprint planning, code reviews, testing and deployment.</li>
+      </ul>
+    </div>
+    <div class="cv-entry">
+      <div class="row"><h3>Delhi Technological University — Teaching Assistant (DSA)</h3><span class="when">Aug 2024 — Present</span></div>
+      <p class="sub">M.Tech assistantship</p>
+      <ul>
+        <li>Supported undergraduate Data Structures &amp; Algorithms and programming-fundamentals courses.</li>
+        <li>Ran lab sessions, clarified core concepts, evaluated assignments and mentored students.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cv-sec">
+    <h2>Selected Projects</h2>
+    <div class="cv-entry">
+      <div class="row"><h3>Analysis AI Backend Service</h3><span class="when">NestJS · MongoDB · OpenAI</span></div>
+      <ul>
+        <li>Scalable AI workflow-orchestration platform with specialised LLM agents for BRD generation, planning, prompt engineering and notebook creation.</li>
+        <li>Secure PDF/DOCX/TXT processing with NER-based anonymisation; real-time streaming, document versioning and persistent conversation history.</li>
+      </ul>
+    </div>
+    <div class="cv-entry">
+      <div class="row"><h3>Multi-Format Document Intelligence &amp; RAG System</h3><span class="when">FastAPI · Azure OpenAI</span></div>
+      <ul>
+        <li>Production RAG platform processing 7+ document formats with Azure OpenAI embeddings and custom TOON encoding for semantic search.</li>
+        <li>Parallel ingestion (ThreadPoolExecutor); agentic retrieval with query expansion, top-K search, OCR extraction and multi-source synthesis.</li>
+      </ul>
+    </div>
+    <div class="cv-entry">
+      <div class="row"><h3>HireLens — AI Résumé Screening Platform</h3><span class="when">Flask · React · Azure OpenAI</span></div>
+      <ul>
+        <li>Async REST APIs, document parsing and LLM-based candidate evaluation with automated skills/education/experience extraction.</li>
+        <li>Recruiter dashboards (React + Material UI) delivering real-time insights and AI-assisted shortlisting.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cv-sec">
+    <h2>Research</h2>
+    <div class="cv-entry">
+      <div class="row"><h3>Hybrid LightGBM–1D CNN for Anomaly Detection in Vehicular CAN Traffic</h3><span class="when">M.Tech Thesis, DTU</span></div>
+      <ul>
+        <li>Intrusion-detection pipeline processing 400,000+ CAN messages across Normal, DoS, Fuzzy and Impersonation attack categories.</li>
+        <li>Engineered feature-enrichment and preprocessing (Pandas/NumPy); benchmarked LightGBM, 1D-CNN, SVM, Decision Tree and KNN to 89.34% accuracy with embedded-deployment feasibility analysis.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cv-sec">
+    <h2>Skills</h2>
+    <div class="cv-skill-row"><span class="lab">Languages</span><div class="cv-tags"><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span></div></div>
+    <div class="cv-skill-row"><span class="lab">Backend</span><div class="cv-tags"><span class="chip">FastAPI</span><span class="chip">NestJS</span><span class="chip">Flask</span><span class="chip">Node.js</span><span class="chip">REST APIs</span><span class="chip">Microservices</span></div></div>
+    <div class="cv-skill-row"><span class="lab">AI / ML</span><div class="cv-tags"><span class="chip">Azure OpenAI</span><span class="chip">RAG Systems</span><span class="chip">LightGBM</span><span class="chip">TensorFlow</span><span class="chip">Scikit-Learn</span><span class="chip">Pandas</span><span class="chip">NumPy</span></div></div>
+    <div class="cv-skill-row"><span class="lab">Data &amp; Infra</span><div class="cv-tags"><span class="chip">MongoDB</span><span class="chip">Docker</span><span class="chip">Git</span><span class="chip">Swagger</span><span class="chip">Azure DevOps</span></div></div>
+    <div class="cv-skill-row"><span class="lab">Methods</span><div class="cv-tags"><span class="chip">Agile Scrum</span><span class="chip">System Design</span><span class="chip">API Development</span></div></div>
+  </section>
+
+  <section class="cv-sec">
+    <h2>Education &amp; Achievements</h2>
+    <div class="cv-entry">
+      <div class="row"><h3>M.Tech, Information Technology — Delhi Technological University</h3><span class="when">2024 — 2026</span></div>
+    </div>
+    <div class="cv-entry">
+      <div class="row"><h3>B.E, Computer Engineering — Thapar Institute of Engineering &amp; Technology</h3><span class="when">2018 — 2022</span></div>
+    </div>
+    <div class="cv-entry">
+      <div class="row"><h3>GATE 2023 (CS-IT) — 82.5 percentile</h3><span class="when">among 1,00,000+ candidates</span></div>
+    </div>
+  </section>
+</div>
+
+<script src="portfolio.js"></script>
+</body>
+</html>
